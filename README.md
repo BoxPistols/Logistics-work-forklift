@@ -25,5 +25,21 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ---
 
-## Routing
+## Routing Setting
+
 $ vue add @vue/router
+
+create files:
+
+```js
+├── src
+│ ├── App.vue
+│ ├── components
+│ │ └── HelloWorld.vue
+│ ├── main.ts
+│ ├── router //new
+│ │ └── index.ts //new
+│ └── views //new
+│     ├── About.vue //new
+│     └── Home.vue //new
+```
