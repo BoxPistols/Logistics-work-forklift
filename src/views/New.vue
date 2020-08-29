@@ -4,7 +4,7 @@
     <div class="editor__lay">
       <div class="editor__org">
         <div class="editor__mol textarea">
-          <textarea class="textarea-edit" name="memo" :value="body"></textarea>
+          <textarea class="textarea-edit" name="memo" :value="memoBody"></textarea>
         </div>
         <div class="editor__mol button">
           <button class="button-save" @click="save">保存</button>
@@ -18,13 +18,17 @@
 export default {
   data: () => {
     return {
-      body: "Hello"
+      memoBody: "Hello"
     };
   },
   methods: {
     save() {
       // alert();
       // this.$router.push('/')
+      this.$store.commit("save", {
+        // id: 2,
+        memoBody: this.memoBody
+      });
     }
   }
 };
