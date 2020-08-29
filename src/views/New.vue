@@ -1,10 +1,11 @@
 <template>
   <div>
     <h2>New</h2>
+    <p>{{$data}}</p>
     <div class="editor__lay">
       <div class="editor__org">
         <div class="editor__mol textarea">
-          <textarea class="textarea-edit" name="memo" :value="memoBody"></textarea>
+          <textarea class="textarea-edit" name="memo" v-model="memoBody"></textarea>
         </div>
         <div class="editor__mol button">
           <button class="button-save" @click="save">保存</button>
@@ -18,40 +19,24 @@
 export default {
   data: () => {
     return {
-      memoBody: "Hello"
-    };
+      memoBody: 'Hello',
+    }
   },
   methods: {
     save() {
-      // alert();
       // this.$router.push('/')
-      this.$store.commit("save", {
-        // id: 2,
-        memoBody: this.memoBody
-      });
-    }
-  }
-};
+      // from store .commit save handler
+      this.$store.commit('save', {
+        memoBody: this.memoBody,
+      })
+    },
+  },
+}
 </script>
 
 <style lang="stylus" scoped>
-/*
-  variable setting
-*/
-
-//colors
-gray-base = #8c97a1
-active = teal
-
-// mixin
-bd(color)
-  border: 2px solid color
-// extend
-active-form
-  bd(active)
-  outline none
-  background-color lighten(forestgreen, 95%)
-
+// components styule
+@import "../assets/style/component.styl";
 
 /*
   view design

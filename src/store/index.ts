@@ -11,7 +11,7 @@ export default new Vuex.Store({
     memos: [
       {
         id: 1,
-        body: "サンプル"
+        body: 'サンプルメモ'
       }
     ]
   },
@@ -20,7 +20,6 @@ export default new Vuex.Store({
       // 新しいidに割り振る
       const max = state.memos[state.memos.length - 1].id;
       memo.id = max;
-
       state.memos.push(memo)// 状態 配列 追加
     }
   }
