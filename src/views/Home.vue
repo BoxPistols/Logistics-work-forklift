@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     newest() {
-      return this.$store.state.memos
+      return this.$store.state.memos.slice().reverse()
     },
   },
 }
