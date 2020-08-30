@@ -30,11 +30,11 @@ export default {
   },
   methods: {
     saveMemo() {
-      // this.$router.push('/')
+      this.$router.push('/')
       // from store .commit save handler
       this.$store.commit('saveMemo', {
         // id: 2,
-        bodyMemo: this.memoBody,
+        memoBody: this.memoBody,
       })
     },
   },
