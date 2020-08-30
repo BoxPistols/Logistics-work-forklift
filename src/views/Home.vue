@@ -1,7 +1,6 @@
 <template>
   <div>
     <h2>List</h2>
-
     <div class="result__lay">
       <div class="result__org">
         <ul v-for="memo in newest" :key="memo.id" class="result__mol">
@@ -21,7 +20,7 @@ export default {
     return {}
   },
   computed: {
-    newest() {
+    newest(): object {
       return this.$store.state.memos.slice().reverse()
     },
   },
