@@ -20,7 +20,7 @@ export default {
     return {}
   },
   computed: {
-    newest(): object {
+    newest(): any {
       return this.$store.state.memos.slice().reverse()
     },
   },

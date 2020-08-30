@@ -16,6 +16,7 @@ const store = new Vuex.Store({
         memoBody: 'xxxxxxxxxxx',
       },
     ],
+    count: 0,
   },
   mutations: {
     saveMemo(state, val) {
@@ -23,6 +24,13 @@ const store = new Vuex.Store({
       //const addId = state.memos.length
       val.id = addId + 1
       state.memos.push(val)
+    },
+    // counter
+    increment(state) {
+      state.count += 1
+    },
+    decrement(state) {
+      state.count -= 1
     },
   },
 })
