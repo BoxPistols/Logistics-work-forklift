@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 // import Name from '@/components/Name.vue';
 
 export default {
@@ -20,7 +20,7 @@ export default {
     return {}
   },
   computed: {
-    newest(): any {
+    newest() {
       return this.$store.state.memos.slice().reverse()
     },
   },

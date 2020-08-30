@@ -10,15 +10,13 @@
           <button @click="increment" class="count">Add</button>
         </div>
 
-        <div class="counter__mol">
-          <!-- {{ count }} -->
-          count: {{ mCount }}
-        </div>
-        <div class="counter__mol">double: {{ double }}</div>
-        <div class="counter__mol">calcA: {{ calcA }}</div>
+        <div class="counter__mol">アイテム数量: {{ mCount }}</div>
+        <div class="counter__mol">人数x2: {{ double }}</div>
+        <div class="counter__mol">稼働工数: {{ calcA }}</div>
 
         <div class="counter__mol">
-          <input v-model="addCount" type="number" /> inputA
+          スポットヘルプ追加人数：<br />
+          <input v-model="addCount" type="number" />
           <p>
             総合計に追加
             <br />
@@ -71,17 +69,28 @@ export default {
     font-size 20px
     margin-bottom 16px
 
+.about
+  background: aliceblue
+  padding: 24px
+  text-align left
+  margin auto
+  display flex
+  flex-direction column
+  align-items: center
+
 button, input
   min-height 2em
   background-color white
-  border solid 1px #aaa
+  border solid 1px orange
 button
   line-height 2
   width 120px
   padding 4px 12px
   font-size 24px
   margin 0 4px
+  color orange
 input
   padding 2px 8px
-  font-size 16px
+  font-size 20px
+  color teal
 </style>
