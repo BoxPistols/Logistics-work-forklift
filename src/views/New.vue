@@ -1,14 +1,15 @@
 <template>
   <div>
     <h2>New</h2>
-    <p>{{$data}}</p>
+    <p>v-model="memoBody" {{$data}}</p>
+    <p>{{ showMsg }}</p>
     <div class="editor__lay">
       <div class="editor__org">
         <div class="editor__mol textarea">
           <textarea class="textarea-edit" name="memo" v-model="memoBody"></textarea>
         </div>
         <div class="editor__mol button">
-          <button class="button-save" @click="save">保存</button>
+          <button class="button-save" @click="saveMemo">保存</button>
         </div>
       </div>
     </div>
@@ -22,13 +23,17 @@ export default {
       memoBody: 'Hello',
     }
   },
+  computed: {
+    showMsg() {
+      return this.$store.state.msg
+    },
+  },
   methods: {
-    save() {
+    saveMemo() {
       // this.$router.push('/')
       // from store .commit save handler
-      this.$store.commit('save', {
-        memoBody: this.memoBody,
-      })
+      const x = this.$store.state.msg + 'xxx' + this.$store.state.val * 100
+      this.memoBody = x
     },
   },
 }
