@@ -43,3 +43,14 @@ create files:
 │     ├── About.vue //new
 │     └── Home.vue //new
 ```
+
+## Add Vuex
+
+- store/index.ts
+  - create
+    - state (data)
+      - object
+    - mutation (handler)
+- .vue
+ - not need store file, because auto import
+ - $store.state....

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>New</h2>
-    <p>v-model="memoBody" {{$data}}</p>
+    <p>v-model="memoBody" {{ $data }}</p>
     <p>{{ showMsg }}</p>
     <div class="editor__lay">
       <div class="editor__org">
@@ -32,8 +32,10 @@ export default {
     saveMemo() {
       // this.$router.push('/')
       // from store .commit save handler
-      const x = this.$store.state.msg + 'xxx' + this.$store.state.val * 100
-      this.memoBody = x
+      this.$store.commit('saveMemo', {
+        // id: 2,
+        bodyMemo: this.memoBody,
+      })
     },
   },
 }
