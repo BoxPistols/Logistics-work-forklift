@@ -1,21 +1,50 @@
-/*
-  Base Stylus
- */
+/*=============================================
+=           Base Stylus            =
+=============================================*/
 li
   list-style none
-/*
-  variable setting
-*/
 
-//colors
+/*=============================================
+=          variable setting           =
+=============================================*/
+
+/*----------  colors  ----------*/
 gray-base = #8c97a1
 active = teal
 
-// mixin
+/*----------  mixin  ----------*/
 bd(color)
   border: 2px solid color
-// extend
+
+/*----------  extend  ----------*/
 active-form
   bd(active)
   outline none
   background-color lighten(forestgreen, 95%)
+
+
+/*=============================================
+=           block            =
+=============================================*/
+
+/*----------  flex  ----------*/
+
+/*--- variable ---*/
+fx = flex
+c = center
+
+/*--- for css class on html ---*/
+.fx
+  display fx
+.ai-c
+  align-items c
+.jc-c
+  justify-content c
+
+/*--- for @extends ---*/
+fx
+  display fx
+ai-c
+  align-items c
+jc-c
+  justify-content c
