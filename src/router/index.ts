@@ -16,6 +16,11 @@ const routes: Array<RouteConfig> = [
     component: () => import('../views/New.vue'),
   },
   {
+    path: '/edit/:id',
+    name: 'Edit',
+    component: () => import('../views/Edit.vue'),
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
