@@ -5,6 +5,7 @@
             <router-link to="/new" class="menu">New</router-link>
             <router-link to="/edit" class="menu">Edit</router-link>
             <router-link to="/about" class="menu">About</router-link>
+            <router-link to="/develop" class="menu">Develop</router-link>
         </div>
         <router-view />
     </div>

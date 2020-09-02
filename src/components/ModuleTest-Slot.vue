@@ -3,7 +3,7 @@
         <h1>{{ msg }}</h1>
         <slot name="slot-title"></slot>
         <slot name="slot-list"></slot>
-        <slot></slot>
+        <!-- <slot></slot> -->
     </div>
 </template>
 
@@ -11,7 +11,7 @@
 export default {
     data() {
         return {
-            msg: 'Hello',
+            msg: 'Hello Slot',
         }
     },
 }
