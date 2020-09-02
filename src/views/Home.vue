@@ -1,5 +1,10 @@
-<template>
+<template lang="html">
     <div>
+        <Hello>
+            <p slot="a">aaa</p>
+            <!-- <p slot="b">bbb</p> -->
+        </Hello>
+
         <h2>List</h2>
         <div class="result__lay">
             <div class="result__org">
@@ -12,7 +17,7 @@
 </template>
 
 <script>
-// import Name from '@/components/Name.vue';
+import Hello from '@/components/Hello.vue'
 
 export default {
     name: 'home',
@@ -23,6 +28,9 @@ export default {
         newest() {
             return this.$store.state.memos.slice().reverse()
         },
+    },
+    components: {
+        Hello,
     },
 }
 </script>
@@ -38,5 +46,4 @@ export default {
         li
             border-bottom 1px solid lightgray
             font-size 1.5em
-
 </style>
