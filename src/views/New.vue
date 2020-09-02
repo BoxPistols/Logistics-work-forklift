@@ -1,43 +1,43 @@
 <template>
-  <div>
-    <h2>New</h2>
-    <p>v-model="memoBody" {{ $data }}</p>
-    <p>{{ showMsg }}</p>
-    <div class="editor__lay">
-      <div class="editor__org">
-        <div class="editor__mol textarea">
-          <textarea class="textarea-edit" name="memo" v-model="memoBody"></textarea>
+    <div>
+        <h2>New</h2>
+        <p>v-model="memoBody" {{ $data }}</p>
+        <p>{{ showMsg }}</p>
+        <div class="editor__lay">
+            <div class="editor__org">
+                <div class="editor__mol textarea">
+                    <textarea class="textarea-edit" name="memo" v-model="memoBody"></textarea>
+                </div>
+                <div class="editor__mol button">
+                    <button class="button-save" @click="saveMemo">保存</button>
+                </div>
+            </div>
         </div>
-        <div class="editor__mol button">
-          <button class="button-save" @click="saveMemo">保存</button>
-        </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
-  data: () => {
-    return {
-      memoBody: 'Hello',
-    }
-  },
-  computed: {
-    showMsg() {
-      return this.$store.state.msg
+    data: () => {
+        return {
+            memoBody: 'Hello',
+        }
     },
-  },
-  methods: {
-    saveMemo() {
-      this.$router.push('/')
-      // from store .commit save handler
-      this.$store.commit('saveMemo', {
-        // id: 2,
-        memoBody: this.memoBody,
-      })
+    computed: {
+        showMsg() {
+            return this.$store.state.msg
+        },
     },
-  },
+    methods: {
+        saveMemo() {
+            this.$router.push('/')
+            // from store .commit save handler
+            this.$store.commit('saveMemo', {
+                // id: 2,
+                memoBody: this.memoBody,
+            })
+        },
+    },
 }
 </script>
 
