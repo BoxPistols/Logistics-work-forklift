@@ -9,10 +9,12 @@
 <script>
 export default {
     data() {
-        return {}
+        return {
+
+        }
     },
     computed: {
-        memo() {
+        memo: function() {
             const id = this.$route.params['id']
             return this.$store.state.momes.find((memo) => memo.id == id)
         },
