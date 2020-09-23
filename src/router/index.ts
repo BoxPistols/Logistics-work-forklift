@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
+import ListView from '../views/ListView.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,11 @@ const routes: Array<RouteConfig> = [
         path: '/',
         name: 'Home',
         component: Home,
+    },
+    {
+        path: '/list-view',
+        name: ':list-view',
+        component: ListView,
     },
     {
         path: '/new',

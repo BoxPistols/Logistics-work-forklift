@@ -2,9 +2,10 @@
     <div id="app">
         <div id="nav">
             <router-link to="/" class="menu">Home</router-link>
+            <router-link to="/list-view" class="menu">ListView</router-link>
             <router-link to="/new" class="menu">New</router-link>
-            <router-link to="/edit" class="menu">Edit</router-link>
-            <router-link to="/about" class="menu">About</router-link>
+            <!-- <router-link to="/edit" class="menu">Edit</router-link> -->
+            <!-- <router-link to="/about" class="menu">About</router-link> -->
             <router-link to="/develop" class="menu">Develop</router-link>
         </div>
         <router-view />

@@ -48,3 +48,133 @@ ai-c
   align-items c
 jc-c
   justify-content c
+
+/*=============================================
+=           Logistics Fork App            =
+=============================================*/
+.logistics
+  .container
+    display flex
+    justify-content center
+    padding 28px 24px 48px
+  h1
+    margin 0
+    display inline-flex
+    align-items center
+    img
+      margin-right 4px
+      width 52px
+  h2
+    margin 12px 0 12px 0
+    display flex
+    align-items center
+    justify-content center
+    font-weight normal
+    font-size 24px
+    img
+      margin-right 4px
+      width 42px
+  .about
+    padding: 24px
+    text-align left
+    margin auto
+    display flex
+    flex-direction column
+    align-items: center
+
+  .container
+    background: #234
+    color: white
+    margin auto
+    max-width 70vw
+    max-height 80vh
+    width auto
+    overflow auto
+    border-radius 16px
+    box-shadow 4px 8px 12px #9d9ca4
+    .section
+      margin 12px 32px
+    h3
+      font-size 2rem /* 32/16 */
+      border-bottom 1px solid #ccc
+    h4
+      font-size 1.125rem /* 18/16 */
+      margin 8px 0 4px
+      font-weight 600
+  table
+    margin-bottom 24px
+    border-collapse collapse
+    tr, td
+      font-size 1.15rem
+      min-width 32px
+      line-height 2
+      padding 4px 12px
+      border 1px solid #ccc
+    td
+      text-align center
+  .counter
+    &__mol
+      font-size 20px
+      margin-bottom 16px
+
+  .spot
+    // @extends fx
+    input
+      border-color pink
+      border-width 3px
+      border-radius 25px
+      font-size 20px
+
+  .att
+    display: block
+    margin 0
+    font-size .875rem /* 14/16 */
+    transition .3s
+    opacity 0
+    &.over
+      opacity 1
+      color crimson
+
+
+  button, input
+    min-height 1.5em
+    background-color white
+    border solid 1px darkorange
+    &:hover
+      cursor pointer
+    &:focus
+      outline none
+  button
+    line-height 1.5
+    min-width 80px
+    padding 8px 16px
+    font-size 20px
+    margin 0 4px
+    color darkorange
+    border-width 3px
+    border-radius 25px
+    &.inc
+      border-color teal
+      color teal
+  input[type="number"]
+    width 80px
+    padding 2px 8px
+    font-size 20px
+    color teal
+
+  select
+    margin 12px 0
+    font-size 20px
+    padding 8px 12px
+
+  .result_num
+    font-size 32px
+    font-weight 600
+
+
+  /* View */
+  .view__mol
+    ul
+      li
+        font-size 20px
+        line-height 1.8
